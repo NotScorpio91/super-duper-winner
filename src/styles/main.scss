@@ -1,0 +1,60 @@
+@import 'mixins';
+
+* { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 17px;
+    overflow-x: hidden;
+    font-family: "Outfit", sans-serif;
+    background: url('../../public/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-position: top right;
+
+
+    @include W(1100px) {
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-position: 40% ;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+input, textarea {
+    outline: none;
+    transition: 200ms;
+    font-family: "Outfit", sans-serif;
+}
+
+main {
+    min-height: 100vh;
+}
+
+::selection {
+    background: rgba(255, 255, 255, .2);
+}
